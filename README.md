@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MEAN Stack Single Page Application Starter
 
 This is a repo for a starter appliation for a Single Page MEAN Stack application. Just download and install and you have a good foundation for building application. 
@@ -18,3 +19,7 @@ If you have any questions or requests, email us at [chris@scotch.io](mailto:chri
 - Development and Production Environments
 - Link examples
 - Single Page AngularJS Animations
+=======
+# concreetWeb
+landing page for concreet
+>>>>>>> 336fcaad1404ba8294ab1babbf00c704a75b1ec4
