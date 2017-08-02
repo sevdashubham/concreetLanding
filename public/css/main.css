@@ -65,6 +65,12 @@ h5 {
 a {
 	color: #e84545;
 }
+a:visited {
+	text-decoration: none;
+	text-transform: lowercase;
+    /* style visited link */
+}
+
 a:hover, a:focus {
 	text-decoration: none;
 	-moz-transition: background-color, color, 0.3s;
@@ -73,7 +79,7 @@ a:hover, a:focus {
 	transition: background-color, color, 0.3s;
 }
 body {
-	font-family: "Source Sans Pro";
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	color: #6c7279;
 }
@@ -83,6 +89,7 @@ ul, ol {
 }
 ul li {
 	list-style: none;
+	text-decoration: none;
 }
 .section {
 	padding: 0px 0;
@@ -108,7 +115,7 @@ ul li {
 }
 #header .header-content {
 	margin-top: 5px;
-	max-width: 1170px;
+	max-width: 100%;
 	padding: 0px 0;
 	width: 100%;
 	-moz-transition: padding 0.3s;
@@ -118,23 +125,24 @@ ul li {
 }
 #header .logo h2 {
 	 color: #00245A;
-	 font-family: "Source Sans Pro";
+	 font-family: 'Montserrat', sans-serif;
 	 font-size: 45px;
 	 letter-spacing: 1px;
 	 font-weight: bold;
 	 	display: inline-block;
 	 text-transform: uppercase;
-	 margin: 5px 0px 5px 40px;
+	 margin: 0px 0px 0px 15px;
 }
 #header.fixed {
 	background-color: #FEDFBB;
 }
 #header.fixed .header-content {
 	border-bottom: 0;
+
 	padding: 0px 0;
 }
 #header.fixed .nav-toggle {
-	top: 0px;
+	top: 15px;
 }
 .navigation.open {
 	opacity: 0.9;
@@ -146,24 +154,49 @@ ul li {
 }
 .navigation {
 	float: right;
+	vertical-align: top;
+margin: 0px 15px 0px 0px;
+	text-decoration: none;
+}
+.navigation2 {
+	float: left;
+	vertical-align: top;
+margin: 0px 15px 0px 0px;
+	text-decoration: none;
 }
 .navigation li {
+
+text-decoration: none;
 	display: inline-block;
 }
 .navigation a {
+	float: right;
 	color: #00245A;
-	 font-family: "Source Sans Pro";
+		text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 20px;
 	font-weight: bold;
-	 margin: 0px 0px 0px 30px;
+	 margin: 10px 0px 0px 30px;
 	letter-spacing: 0px;
 	padding: 0px 0;
 	text-transform: uppercase;
 	display: inline-block;
 }
+.navigation a:link {
+text-decoration: none;
+color: #00245A;
+}
+
+.navigation a:visited{
+text-decoration: none;
+color: #00245A;
+}
+
 .navigation a:hover, .navigation a.active {
 	color: #fff;
+	text-decoration: none;
 }
+
 .nav-toggle {
 	display: none;
 	height: 44px;
@@ -171,7 +204,7 @@ ul li {
 	position: fixed;
 	right: 5%;
 	text-indent: 100%;
-	top: 15px;
+	top: 13px;
 	white-space: nowrap;
 	width: 44px;
 	z-index: 99999;
@@ -201,7 +234,7 @@ ul li {
 	transition-property: transform;
 }
 .nav-toggle:before {
-	background-color: #e84545;
+	background-color:  #00245A;
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
 	-webkit-transform: scale(1);
@@ -212,7 +245,7 @@ ul li {
 	transition-duration: 0.3s;
 }
 .nav-toggle:after {
-	background-color: #e84545;
+	background-color:  #00245A;
 	-moz-transform: scale(0);
 	-ms-transform: scale(0);
 	-webkit-transform: scale(0);
@@ -318,12 +351,13 @@ ul li {
 	opacity: 0.5;
 }
 .banner-text {
-	padding-top: 33%;
+	padding-top: 18%;
+
 }
 .banner-text h1 {
-	color: #FEDFBB;
-	font-family: "Source Sans Pro";
-	font-size: 65px;
+	color: #00245A;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 60px;
 	letter-spacing: 1px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -338,6 +372,45 @@ ul li {
 	margin-bottom: 80px;
 	text-transform: uppercase;
 }
+
+.banner input[type=submit] {
+    background-color:#00245A;
+    color: #FEDFBB;
+		width: 50%;
+		text-align: center;
+		font-size: 20px;
+		border-radius: 4px;
+		border-color: #00245A;
+    cursor: pointer;
+		margin: 0 auto;
+ display: table;
+ text-decoration: none;
+		font-weight: bold;
+		padding: 15px 15px 15px 15px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.banner input[type=submit]:hover {
+    background-color: #fff;
+		text-decoration:none !important;
+		color: #00245A;
+}
+
+.banner a:link {
+text-decoration: none;
+color: #00245A;
+}
+
+.banner a:visited{
+text-decoration: none;
+color: #00245A;
+}
+
+.banner a:hover, .navigation a.active {
+	color: #fff;
+	text-decoration: none;
+}
+
 /* ------------------------------------------------------------------------------
 	 Intro
 -------------------------------------------------------------------------------*/
@@ -372,11 +445,62 @@ ul li {
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 }
+
+.intro input[type=submit] {
+    background-color:#00245A;
+    color: #FEDFBB;
+		width: 50%;
+		text-align: center;
+		font-size: 20px;
+    border-radius: 4px;
+		border-color: #00245A;
+    cursor: pointer;
+		margin: 0 auto;
+ display: table;
+ text-decoration: none;
+		font-weight: bold;
+		padding: 15px 15px 15px 15px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.intro input[type=submit]:hover {
+    background-color: #fff;
+		border-radius: 4px;
+		text-decoration:none !important;
+		color: #00245A;
+}
+
+.intro a:link {
+text-decoration: none;
+color: #00245A;
+}
+
+.intro a:visited{
+text-decoration: none;
+color: #00245A;
+}
+
+.intro a:hover, .navigation a.active {
+	color: #fff;
+	border-radius: 4px;
+	text-decoration: none;
+}
+.intro img.imageScreenShot {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.intro img.background-tint{
+	background-color: #00245A;
+	/*background-color: rgba(0, 36, 90, 1); // Tint color*/
+	/*background: linear-gradient(rgba(0, 36, 90, 1));*/
+	 /*box-shadow: 0px 313px rgba(0, 36, 90, 1) inset;*/
+	}
 /* ------------------------------------------------------------------------------
 	 Services
 -------------------------------------------------------------------------------*/
 .service-section {
-	padding-top: 0px;
+	padding-top: 30spx;
 }
 .services {
 	margin-bottom: 50px;
@@ -465,6 +589,7 @@ margin: auto;
 	font-size: 20px;
 	padding: 15px 15px 15px 15px;
 	text-align:center;
+	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
 
 }
@@ -475,7 +600,7 @@ margin: auto;
 	font-size: 16px;
 	padding: 15px 15px 15px 15px;
 	text-align:center;
- text-transform: lowercase;
+ text-transform: uppercase	;
 	font-family: 'Montserrat', sans-serif;
 
 }
@@ -611,7 +736,8 @@ margin-right: 5px;
 
 /* When moving the mouse over the submit button, add a darker green color */
 .works input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #fff;
+		color: #00245A;
 }
 
 /* Add a background color and some padding around the form */

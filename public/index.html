@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/font-icon.css">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
 
@@ -35,11 +36,11 @@
 </head>
 <body ng-app="sampleApp" ng-controller="NerdController">
 	<!-- header section -->
-	<section class="banner" role="banner">
+	<section id = "banner" class="banner" role="banner">
 	  <!--header navigation -->
 	  <header id="header">
-	    <div class="header-content clearfix"> <a class="logo" href="#">
-	      <h2>CONCREET</h2>
+	    <div class="header-content clearfix"> <nav role="navigation2">  <a href="#banner" class="logo">
+	      <h2>CONCREET</h2></a>
 	      <!-- <img src="images/logo.png" alt=""></a> -->
 	      <nav class="navigation" role="navigation">
 	        <ul class="primary-nav">
@@ -47,7 +48,9 @@
 	          <li><a href="#teams">ABOUT US</a></li>
 	          <li><a href="#works">SIGN UP FOR BETA</a></li>
 	        </ul>
-	      </nav>
+					</nav>
+				</nav>
+	      <!-- </nav> -->
 	      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
 	  </header>
 	  <!--header navigation -->
@@ -57,7 +60,10 @@
 	      <div class="banner-text text-center">
 	        <h1>WELCOME TO THE DIGITAL AGE OF RENTING</h1>
 	        <p></p>
-	        <nav role="navigation"> <a href="#services" class="banner-btn"><img src="images/down-arrow.png" alt=""></a></nav>
+		        <nav role="navigation"> <a href="#intro" class="banner-btn"><div class="submit-button">
+								<div class="works-content-input-center">
+							<input type="submit" value="LEARN MORE">
+							</div></a></nav>
 	      </div>
 	      <!-- banner text -->
 	    </div>
@@ -73,24 +79,32 @@
 	        <ul class="slides">
 	          <li>
 	            <div class="col-md-6">
-	              <div class="avatar"> <img src="images/image_concreet_website_screenshot.png" alt="" class="img-responsive"> </div>
+	              <div class="avatar"> <img src="images/image_concreet_website_screenshot.png" alt="" class="img-responsive imageScreenShot"> </div>
 	            </div>
 	            <div class="col-md-6">
 	              <blockquote>
 	                <h1>Concreet streamlines every aspect of the rental transaction</h1>
 	                <h1>We are the broker's best friend!</h1>
 	              </blockquote>
+								<nav role="navigation"> <a href="#works" class="banner-btn"><div class="submit-button">
+										<div class="works-content-input-center">
+									<input type="submit" value="SIGN UP FOR BETA">
+									</div></a></nav>
 	            </div>
 	          </li>
 	          <li>
 	            <div class="col-md-6">
-	              <div class="avatar"> <img src="images/image_concreet_website_screenshot.png" alt="" class="img-responsive"> </div>
+	              <div class="avatar"> <img src="images/image_concreet_website_screenshot.png" alt="" class="img-responsive imageScreenShot"> </div>
 	            </div>
 	            <div class="col-md-6">
 	              <blockquote>
 	                <h1>Concreet streamlines every aspect of the rental transaction</h1>
 	                <h1>We are the broker's best friend!</h1>
 	              </blockquote>
+								<nav role="navigation"> <a href="#works" class="banner-btn"><div class="submit-button">
+										<div class="works-content-input-center">
+									<input type="submit" value="SIGN UP FOR BETA">
+									</div></a></nav>
 	            </div>
 	          </li>
 	        </ul>
@@ -133,7 +147,7 @@
 	          </div>
 	        </div>
 	        <div class="col-md-4 col-sm-6 services">
-	          <img src="images/human_head.jpg" alt="human head" height="100px" width="100px">
+	          <img src="images/human_head.jpg" alt="human head" class="background-tint" height="100px" width="100px">
 	          <div class="services-content">
 	            <p>Focus on sales or <br/>process more rentals through<br/>our streamlines systems.</p>
 	          </div>
@@ -163,7 +177,7 @@
 	<section id="works" class="works section no-padding">
 	    <div class="works-content">
 	      <div class="row">
-	      <h2>We want to hear from NYC Brokers! Please sign up below.</h2>
+	      <h2>We want to hear from NYC brokers! Please sign up for the beta below</h2>
 	<div class="container-form">
 		 <form ng-submit="submitForm()">
 	  <div class="container-form-input" >
@@ -194,8 +208,7 @@
 		</div>
 		 </form>
 	</div>
-
-	      <h5>By signing up, you agree to Concreet's Terms of Service</h5>
+	      <h5>BY SIGNING UP, you agree to Concreet's Terms of Service</h5>
 	      <h4>info@concreet.com</h4>
 	      </div>
 	    </div>
@@ -208,14 +221,13 @@
 	      <div class="row">
 
 	        <div class="footer-col col-md-6">
-	                <p>Copyright © 2017 Concreet Technologies All Rights Reserved. Made with <i class="fa fa-heart pulse"></i> by Sevda</p>
+	                <p><b>Copyright © 2017 Concreet Technologies All Rights Reserved.<b></p>
 	              </div>
 	        <div class="footer-col col-md-6">
 	          <ul class="footer-share">
 	            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
 	            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
 	            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-	            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 	          </ul>
 	        </div>
 	      </div>

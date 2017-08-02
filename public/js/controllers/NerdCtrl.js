@@ -1,4 +1,8 @@
-angular.module('NerdCtrl', []).controller('NerdController', function($scope, $http) {
+angular.module('NerdCtrl', []).controller('NerdController', function($scope, $http, $window) {
+
+	$scope.myFunc = function() {
+	    $window.scrollTo(0, 0);
+	    };
 
 $http.defaults.headers.post["Content-Type"] = "application/json";
 	var formData = {
