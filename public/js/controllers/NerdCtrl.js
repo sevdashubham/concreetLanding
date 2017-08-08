@@ -1,30 +1,43 @@
-angular.module('NerdCtrl', []).controller('NerdController', function($scope, $http, $window) {
+angular.module('NerdCtrl', ['ngDialog']).controller('NerdController', function($scope, $anchorScroll, $location, ngDialog, $http, $window, $mdDialog){
+	var originatorEv;
+
+	 this.openMenu = function($mdMenu, ev) {
+		 originatorEv = ev;
+		 $mdMenu.open(ev);
+	 };
+
+	 this.goToSignup = function(x) {
+
+		 var newHash = 'works';
+ if ($location.hash() !== newHash) {
+	 $location.hash('works');
+ } else {
+	 $anchorScroll();
+ }
+	 };
+
+	 this.goToAboutUs = function(x) {
+		 var newHash = 'teams';
+	if ($location.hash() !== newHash) {
+	 $location.hash('teams');
+	} else {
+	 $anchorScroll();
+	}
+	 };
+
+	 this.goToFeatures = function(x) {
+		 var newHash = 'intro';
+	if ($location.hash() !== newHash) {
+	 $location.hash('intro');
+	} else {
+	 $anchorScroll();
+	}
+	 };
+
 
 	$scope.myFunc = function() {
 	    $window.scrollTo(0, 0);
 	    };
 
-$http.defaults.headers.post["Content-Type"] = "application/json";
-	var formData = {
-				 user_id:"77",
-		     email: "default",
-         name: "default"};
-
-				 $scope.submitForm = function() {
-					formData = $scope.form;
-					$scope.form.user_id = new Date().valueOf();
-					console.log("bc", formData);
-			     $http({
-
-			         url: "https://ntmkurtm31.execute-api.us-west-2.amazonaws.com/dev/signup",
-			         data: $scope.form,
-			         method: 'POST'
-
-			     }).success(function(data){
-
-			         console.log("OK", data)
-
-			     }).error(function(err){"ERR", console.log(err)})
-			 };
-
+    
 });
